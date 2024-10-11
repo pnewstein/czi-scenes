@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "czi-scenes"
+version = "0.0.1"
+description = "A tool to get the names of czi scenes."
+authors = [{name = "Peter Newstein", email = "peternewstein@gmail.com"}]
+license = {text = "GPL4"}
+dependencies = ["pylibCZIrw"]
+readme = { file = "README.md", content-type = "text/markdown" }
+
+[project.scripts]
+czi-scenes = "czi_scenes:main"
