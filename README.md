@@ -3,7 +3,9 @@
 A simple utility to get scene information from a Zeiss czi file
 
 ## Installation
+```bash
 pip install git+https://github.com/pnewstein/czi-scenes
+```
 
 ## Command line usage
 ```bash
