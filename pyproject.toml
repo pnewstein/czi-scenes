@@ -8,7 +8,7 @@ version = "0.0.1"
 description = "A tool to get the names of czi scenes."
 authors = [{name = "Peter Newstein", email = "peternewstein@gmail.com"}]
 license = {text = "GPL4"}
-dependencies = ["pylibCZIrw"]
+dependencies = ["czifile"]
 readme = { file = "README.md", content-type = "text/markdown" }
 
 [project.scripts]

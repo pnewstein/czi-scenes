@@ -4,7 +4,7 @@ Reads scene names from a czi file
 import xml.etree.ElementTree as ET
 import sys
 
-from pylibCZIrw import czi
+from czifile import CziFile
 
 def read_scene_information_from_xml_str(xml: str) -> list[dict[str, str]]:
     """
@@ -30,8 +30,9 @@ def main():
     except IndexError:
         print("Please provide path", file=sys.stderr)
         sys.exit(1)
-    with czi.open_czi(path) as czi_file:
-        metadata = czi_file.raw_metadata
+    with CziFile(path) as czi_file:
+        metadata = czi_file.metadata(raw=True)
+    assert isinstance(metadata, str)
     scene_info = read_scene_information_from_xml_str(metadata)
     for scene in scene_info:
         print(scene)
